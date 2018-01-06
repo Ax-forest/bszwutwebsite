@@ -141,11 +141,6 @@ li { list-style: none; }
 
 
 
-.end{
-
-    width: 100%;
-    background-color: black;
-}
 
 
 
@@ -159,10 +154,13 @@ li { list-style: none; }
 .background2{
     height: 900px;
     width: 100%;
+    min-width: 600px;
     margin:0 auto;
     text-align:center ;
     background-color: rgba(195, 197, 206, 0.91);
-
+    background-position: center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
 }
 
 .tab{
