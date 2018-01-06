@@ -1,0 +1,158 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+
+
+        <script type="text/javascript">
+            window.onload = function(){
+                //获取ul ID
+                var oUl = document.getElementById("list");
+                // 获取span ID
+                var caution = document.getElementById("caution");
+                //获取ul 所有孩子
+                var aLi = oUl.children;
+
+                //定时器管理
+                var timer = null;
+
+                //缓动
+                var leader = 0;
+                var target = 0;
+                //停留
+                var current = 0;
+
+
+                for(var i = 0;i<aLi.length;i++){
+                    //鼠标移动
+                    aLi[i].onmouseover = function(){
+                        //关闭定时器
+                        clearInterval(timer);
+                        //获取当前的left值
+                        target = this.offsetLeft;
+                        //开启定时器
+                        timer  = setInterval(autoCaution,20);
+                    }
+                    //鼠标点击
+                    aLi[i].onmousedown = function(){
+                        //清楚所有高亮的文字
+                        for(var j = 0;j<aLi.length;j++){
+                            aLi[j].style.color = "#fff";
+                        }
+                        //当前点击栏变为红色
+                        this.style.color = "#ccc";
+                        //提示框
+                        current = this.offsetLeft;
+                        caution.style.left = current+"px";
+                    }
+                }
+                //鼠标离开
+                oUl.onmouseout = function(){
+                    //关闭定时器
+                    clearInterval(timer);
+                    target = current;
+                    timer  = setInterval(autoCaution,20);
+
+                }
+
+                //缓动动画
+                function autoCaution(){
+                    leader  = leader +(target - leader) /10;
+                    caution.style.left = leader+"px";
+                }
+
+            }
+        </script>
+
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+
+
+
+
+        <div class="bar">
+            <div class="table">
+
+                <div id="box">
+                    <span id="caution"></span>
+                    <ul id="list">
+                        <li><a href="index.html"> 首页</a></li>
+                        <li><a href="plan.html"> 计划</a></li>
+                        <li><a href="subject.html" >活动</a></li>
+                        <li><a href="history.html"> 历史</a></li>
+                        <li><a href="us.html"> 历史</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+
+
+        <div class="background2" style="height: 5000px">
+            <div class="empty3"></div>
+             <div class="tab"style="height: 4840px">
+                 <img src="img/sub1.jpg"  width="600"/>
+
+                 <div class="text" style="height: 4300px" >
+                     <p class="t1">川北七藏沟徒步</p>
+                     <p class="t3" >2015年4月1日 &nbsp清明&nbsp&nbsp摄影：话痨 </p>
+                     <p class="t2">一直想去横断山脉看雪，到2015年终于有了机会。
+                         于是协会中两人收整行装，把一切准备妥当后，坐上了从汉口开往成都的火车</p>
+                     <p class="t2">清晨抵达成都站，没有停留，直接搭车前往松州。路上经过当年的地震废墟，虽然国殇已有七年，依然残垣断壁。而新城就在不远处。
+                         在一座小村过夜，晚饭是面片汤，和旅馆的主人一起吃，五块钱。</p>
+                     <img src="img/sub14.jpg"width="520"/>
+                     <p class="t2">第一天进山，天气清朗，云高水冷。四月的寒冷告诉我们，这是高原。</p>
+
+                     <img src="img/sub6.jpg"width="520"/>
+                     <p class="t2">远处山上白雪粼粼</p>
+                     <img src="img/sub12.jpg"width="520"/>
+                     <p class="t2">夜宿帐篷，烤鸡翅。遇到采冬虫夏草的山人，相互攀谈甚欢。然而忘记把装备收进帐篷</p>
+
+                     <img src="img/sub3.jpg"width="520"/>
+                     <p class="t2">第二天，世界白芒一片。</p>
+                     <img src="img/sub9.jpg"width="520"/>
+                     <p class="t2">鞋和锅都冻住了。不妨前行</p>
+
+                     <img src="img/sub13.jpg"width="520"/>
+                     <p class="t2">雪灌进裤管，荆棘划破衣服。</p>
+                     <img src="img/sub5.jpg"width="520"/>
+                     <p class="t2">在翻上一个几百米高的陡坡后，七藏沟的海子就在不远处</p>
+
+                     <img src="img/sub11.jpg"width="520"/>
+                     <p class="t2">脱下上衣，感受寒冷。</p>
+                     <img src="img/sub2.jpg" width="520"/>
+                     <p class="t2">在冰面上刻下名字，将在春夏消融.</p>
+                     <img src="img/sub8.jpg"width="520"/>
+                     <p class="t2">归程。</p>
+                 </div>
+                 </div>
+        </div>
+
+
+        <div class="end">
+        </div>
+
+
+
+    </body>
+</html>

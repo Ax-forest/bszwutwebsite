@@ -1,0 +1,218 @@
+
+
+
+
+
+@font-face {
+    font-family: fzqkbys;
+    src: url("fzqkbys.TTF");
+}
+
+@font-face {
+    font-family: fzltxh;
+    src: url("fzltxh.TTF");
+}
+
+@font-face {
+    font-family: fzltcxh;
+    src: url("fzltcxh.TTF");
+}
+
+@font-face {
+    font-family: jxm;
+    src: url("jxm.ttf");
+}
+
+body{margin:0px;padding:0px;
+    min-width: 460px;
+    width: expression_r( document.body.clientWidth < 461 ? "460px" : "auto" );
+
+}
+
+.background {
+    background-image: url("../img/11111.jpg");
+    height: 760px;
+    width: 100%;
+    margin:0 auto;
+    text-align:center ;
+    background-position: center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+}
+
+.school{
+
+    color:white;
+    text-align:center ;
+    margin: 0 0 0 0;
+    font:  10px/15px "fzltcxh";
+
+}
+
+.name{
+    font-size: 80px;
+    color: white;
+    text-align:center ;
+    margin: 0 0 0 0;
+    font-family: "fzqkbys";
+    letter-spacing:10px
+    box-shadow: 0px 10px 10px #888888;
+
+}
+
+.introduce{
+    font-size: 15px;
+    color: white;
+
+    text-align:center ;
+    margin: 0 0 0 0;
+    font-family: "fzltcxh";
+    letter-spacing:5px
+}
+
+
+.empty{
+    height: 100px;
+}
+
+.empty2{
+    height: 140px;
+}
+
+
+.empty4{
+    height: 20px;
+}
+
+.table{
+    background-image: url("../img/11111.jpg");
+    height: 48px;
+    width: 100%;
+    margin:0 auto;
+    text-align:center ;
+    background-position: center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    position: fixed;top: 0;z-index: 80;\
+}
+
+.table1{
+    height: 48px;
+    width: 100%;
+    margin:0 auto;
+    text-align:center ;
+    position: fixed;top: 0;z-index: 80;\
+
+box-shadow: 0px 10px 10px #888888;
+}
+
+ul,li { padding: 0; margin: 0; }
+li { list-style: none; }
+#box{
+    height: 48px;
+    width: 400px;
+    margin: 0px auto;
+    position: relative;
+
+}
+#caution {
+    width: 60px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 40px;
+    margin-left: 10px;
+}
+#list {
+    position: absolute;
+}
+#list li {
+    width: 80px;
+    height: 48px;
+    float: left;
+    color: #fff;
+    font: 500 10px/48px "fzltxh";
+    text-align: center;
+    cursor: pointer;
+
+}
+
+
+
+.end{
+
+    width: 100%;
+    background-color: black;
+}
+
+
+
+
+/*
+    * 计划页面
+    *
+    */
+
+
+.background2{
+    height: 900px;
+    width: 100%;
+    margin:0 auto;
+    text-align:center ;
+    background-color: rgba(195, 197, 206, 0.91);
+
+}
+
+.tab{
+    width: 600px;
+    height: 800px;
+    box-shadow: 0px 10px 20px #888888;
+    background-color: white;
+    margin:0 auto;
+}
+
+
+.empty3{
+    height: 80px;
+}
+
+a{
+    text-decoration:none;
+    color: #ffffff;
+    font-family: fzltxh;
+    width: 80px;
+    height: 48px;
+    display:inline-block;
+}
+
+
+
+.text{
+    width: 520px;
+    height: 760px;
+    background-color: white;
+    color: #4b4b4b;
+    margin:0 auto;
+    padding-top: 5px;
+
+}
+
+.t1 {
+    font: 500 30px/30px "fzltxh";;text-align:left;
+}
+
+.t2 {
+    font: 500 14px/30px "fzltxh";;text-align:left;
+    width: 520px;
+    letter-spacing: 1px;
+}
+
+
+.t3 {
+    font: 500 10px/30px "fzltxh";;text-align:left;
+    width: 520px;
+    letter-spacing: 1px;
+    color: #a7a7a7;
+}

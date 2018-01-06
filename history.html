@@ -1,0 +1,145 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+
+
+        <script type="text/javascript">
+            window.onload = function(){
+                //获取ul ID
+                var oUl = document.getElementById("list");
+                // 获取span ID
+                var caution = document.getElementById("caution");
+                //获取ul 所有孩子
+                var aLi = oUl.children;
+
+                //定时器管理
+                var timer = null;
+
+                //缓动
+                var leader = 0;
+                var target = 0;
+                //停留
+                var current = 0;
+
+
+                for(var i = 0;i<aLi.length;i++){
+                    //鼠标移动
+                    aLi[i].onmouseover = function(){
+                        //关闭定时器
+                        clearInterval(timer);
+                        //获取当前的left值
+                        target = this.offsetLeft;
+                        //开启定时器
+                        timer  = setInterval(autoCaution,20);
+                    }
+                    //鼠标点击
+                    aLi[i].onmousedown = function(){
+                        //清楚所有高亮的文字
+                        for(var j = 0;j<aLi.length;j++){
+                            aLi[j].style.color = "#fff";
+                        }
+                        //当前点击栏变为红色
+                        this.style.color = "#ccc";
+                        //提示框
+                        current = this.offsetLeft;
+                        caution.style.left = current+"px";
+                    }
+                }
+                //鼠标离开
+                oUl.onmouseout = function(){
+                    //关闭定时器
+                    clearInterval(timer);
+                    target = current;
+                    timer  = setInterval(autoCaution,20);
+
+                }
+
+                //缓动动画
+                function autoCaution(){
+                    leader  = leader +(target - leader) /10;
+                    caution.style.left = leader+"px";
+                }
+
+            }
+        </script>
+
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+
+
+
+
+        <div class="bar">
+            <div class="table">
+
+                <div id="box">
+                    <span id="caution"></span>
+                    <ul id="list">
+                        <li><a href="index.html"> 首页</a></li>
+                        <li><a href="plan.html"> 计划</a></li>
+                        <li><a href="subject.html" >活动</a></li>
+                        <li><a href="history.html"> 历史</a></li>
+                        <li><a href="us.html"> 历史</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+
+
+        <div class="background2">
+            <div class="empty3"></div>
+             <div class="tab">
+                 <div class="text">
+                 <p class="t1">跋涉者协会</p>  <!--标题-->
+                     <p class="t2">&nbsp&nbsp&nbsp&nbsp武汉理工大学跋涉者协会是以开展登山，徒步，骑行，搭车旅行等户外活动为主要活动的公益化社团，
+                         成立于2005年，是武汉理工大学历史最悠久的协会之一。武汉理工大学马房山校区跋涉者协会成立于2014年3月。
+                     </p>
+                     <p class="t2">
+                         &nbsp&nbsp&nbsp&nbsp户外精神就在于团结互助，平等共嬴，开拓创新。本着这样的理念，我们致力于将协会打造成一个充满活力，
+                         充满激情，不拘泥于固定模式， 没有过份约束的大学生集体。为广大理工学子提供一个户外运动的平台。
+                     </p>
+                     <p class="t2">
+                         &nbsp&nbsp&nbsp&nbsp协会将在每个假期组织多条户外线路，无论你是新生还是老生，都可参加。由于本协会是公益化社团，在逬入之时并不需缴纳会费，
+                         每次活动费用AA。
+                     </p>
+                     <p class="t2">
+                         &nbsp&nbsp&nbsp&nbsp协会中并无等级隔绝，只有热爱户外的学长学姐。没有利益冲突，只有纵情山岭的欢声笑语。 无论你是学弟学妹抑或身处何方，
+                         只要你有着一 颗热爱生活，自由自在的内心，跋涉者永远是你们温暖如家的港湾。</p>
+                 </div>
+
+
+
+
+             </div>
+        </div>
+
+
+        <div class="end">
+        </div>
+
+
+
+    </body>
+</html>
